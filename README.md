@@ -1,22 +1,38 @@
-# KolibriOS
+# maxregnerOS
 
 [![License](https://img.shields.io/badge/License-GPL%202.0-green)](./COPYING.TXT)
-[![Build system](https://git.kolibrios.org/KolibriOS/kolibrios/actions/workflows/build.yaml/badge.svg)](https://git.kolibrios.org/KolibriOS/kolibrios/actions)
+[![Build Status](https://img.shields.io/badge/Build-Active-brightgreen)]()
 
-KolibriOS is a hobby operating system for x86-compatible computers, which is currently being developed by a small but passionate team of enthusiasts.
+maxregnerOS is a modern, vibrant operating system for x86-compatible computers, featuring the innovative MROS Desktop Environment (DDE) with Linux application support.
 
-Its kernel, most drivers, and many programs are written entirely in [FASM](https://flatassembler.net/) assembly language, making them very compact and lean on system resources.
+Built upon the solid foundation of KolibriOS, maxregnerOS combines the efficiency of assembly language programming with modern UI design and enhanced functionality. The system features vibrant colors, contemporary visual elements, and aims to bridge the gap between lightweight hobby OS development and practical desktop computing.
 
-Based on [MenuetOS](https://www.menuetos.net/), it uses its own standards and is NOT fully POSIX or UNIX compliant.
+Key Features:
+- 🎨 **Vibrant UI**: Modern, colorful interface with the custom MROS Desktop Environment
+- 🐧 **Linux App Support**: Compatibility layer for running Linux applications
+- ⚡ **Lightweight**: Efficient assembly language core for optimal performance
+- 🎯 **Modern Design**: Contemporary visual elements and user experience
+
+Based on [KolibriOS](https://kolibrios.org/) and [MenuetOS](https://www.menuetos.net/), maxregnerOS extends these foundations with modern enhancements while maintaining system efficiency.
 
 ## Contributing
 
-We would appreciate any participation in the project and always welcome new users and contributors.
+We welcome contributions to maxregnerOS! Whether you're interested in UI design, system programming, Linux compatibility features, or documentation, there's a place for you in our community.
+
+Areas where we especially need help:
+- 🎨 UI/UX design for the MROS Desktop Environment
+- 🐧 Linux application compatibility layer development
+- 📚 Documentation and user guides
+- 🧪 Testing and bug reporting
+- 🔧 System optimization and new features
 
 Detailed instructions for the contribution process can be found in the [contributing guide](./CONTRIBUTING.md).
 
-Common list of tasks, issues and enhancement proposals can be found on [this page](https://git.kolibrios.org/KolibriOS/kolibrios/issues).
+## Special Thanks
 
-## Special thanks
+maxregnerOS builds upon the excellent work of:
+- The **KolibriOS** team for creating a solid, efficient operating system foundation
+- **Ville Turjanmaa**, author of MenuetOS, whose pioneering work made this all possible
+- The open-source community for tools, libraries, and inspiration
 
-The KolibriOS team expresses special thanks to the author of the 32-bit **MenuetOS**, [Ville Turjanmaa](https://www.menuetos.net/contact.htm). We also want to note that all **MenuetOS** copyrights have been preserved.
+All original copyrights from MenuetOS and KolibriOS have been preserved and respected.
