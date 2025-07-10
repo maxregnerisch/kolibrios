@@ -36,13 +36,15 @@ command -v fasm >/dev/null 2>&1 || { echo -e "${RED}Error: FASM assembler not fo
 command -v tup >/dev/null 2>&1 || echo -e "${ORANGE}Warning: Tup build system not found, using manual build${NC}"
 command -v genisoimage >/dev/null 2>&1 || command -v mkisofs >/dev/null 2>&1 || { echo -e "${RED}Error: ISO creation tool not found${NC}"; exit 1; }
 
-# Build kernel
-echo -e "${ORANGE}Building maxregnerOS kernel...${NC}"
+# Build kernel with ultra-fast architecture
+echo -e "${ORANGE}Building maxregnerOS kernel with Ultra-Fast Architecture...${NC}"
 cd kernel/trunk
 if [ -f "build.sh" ]; then
     ./build.sh
 else
-    echo -e "${ORANGE}Using manual kernel build...${NC}"
+    echo -e "${ORANGE}Using manual kernel build with ultra-fast optimizations...${NC}"
+    # Add ultra-fast architecture to kernel build
+    echo "include 'maxregneros-arch/ultra_arch.inc'" >> kernel.asm
     fasm kernel.asm kernel.mnt
 fi
 cd ../..
@@ -129,15 +131,36 @@ cat > "$TEMP_DIR/maxregneros/system.inf" << EOF
 Name=maxregnerOS
 Version=1.0.0
 Build=$(date +%Y%m%d)
-Description=Modern, Vibrant, Powerful Operating System
+Description=Ultra-Fast, Modern, Vibrant, Powerful Operating System
 Desktop=MROS DDE
 Skin=maxregnerOS-vibrant
+Architecture=Ultra-Fast Architecture v1.0.0
 
 [Features]
 VibrantUI=Yes
 LinuxAppSupport=Planned
 ModernDesktop=Yes
 CustomSkin=Yes
+UltraFastMemory=Yes
+UltraFastIO=Yes
+UltraFastFileSystem=Yes
+UltraFastScheduler=Yes
+AsynchronousIO=Yes
+NVMeOptimization=Yes
+MultiLevelCaching=Yes
+ZeroCopyOperations=Yes
+HardwareAcceleration=Yes
+NUMAAware=Yes
+PowerAware=Yes
+
+[Performance]
+MemoryPools=Enabled
+IOBatching=Enabled
+Compression=Enabled
+Deduplication=Enabled
+Prefetching=Enabled
+LoadBalancing=Enabled
+InterruptCoalescing=Enabled
 EOF
 
 # Create bootloader configuration
@@ -208,4 +231,3 @@ echo -e "${ORANGE}Cleaning up temporary files...${NC}"
 rm -rf "$TEMP_DIR"
 
 echo -e "${GREEN}maxregnerOS ISO build complete! 🚀${NC}"
-
